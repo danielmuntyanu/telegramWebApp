@@ -46,7 +46,6 @@ buy.addEventListener("click", () => {
 });
 
 order.addEventListener("click", () => {
-    return;
     document.getElementById("error").innerText = '';
 
     let first_name = document.getElementById("first_name").value;
@@ -70,24 +69,24 @@ order.addEventListener("click", () => {
 //        }
 //    }
 //
-//    let data = {
-//        'first_name': first_name,
-//        'last_name': last_name,
-//        'username': username,
-//        'language_code': language_code,
-//        'is_premium': is_premium,
-//        'allows_write_to_pm': allows_write_to_pm,
-//        'query_id': query_id,
-//        'auth_date': auth_date
-//    }
+    let data = {
+        'first_name': first_name,
+        'last_name': last_name,
+        'username': username,
+        'language_code': language_code,
+        'is_premium': is_premium,
+        'allows_write_to_pm': allows_write_to_pm,
+        'query_id': query_id,
+        'auth_date': auth_date
+    }
 
-//    let message = '';
-//    for (let key in data) {
-//        message += key + ': ' + data[key] + '\n';
-//    }
-//    alert(message);
+    let message = '';
+    for (let key in data) {
+        message += key + ': ' + data[key] + '\n';
+    }
+    alert(message);
 
 //    tg.sendData(JSON data)
-//    enableClosingConfirmation();
+    enableClosingConfirmation();
     tg.close();
 });
