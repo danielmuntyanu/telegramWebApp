@@ -16,7 +16,7 @@ buy.addEventListener("click", () => {
     msg += '\tis_premium: ' + tg.initDataUnsafe.user.is_premium + '\n'
     msg += '\tallows_write_to_pm: ' + tg.initDataUnsafe.user.allows_write_to_pm + '\n'
     msg += '\n'
-    msg += 'query_id: ' + tg.initDataUnsafe.query_id;
+    msg += 'query_id: ' + tg.initDataUnsafe.query_id + '\n';
     msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
 //    query_id
 //    user:
@@ -88,6 +88,6 @@ order.addEventListener("click", () => {
     alert(message);
 
 //    tg.sendData(JSON data)
-    enableClosingConfirmation()
+//    enableClosingConfirmation()
     tg.close();
 });
