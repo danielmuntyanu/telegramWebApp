@@ -88,6 +88,6 @@ order.addEventListener("click", () => {
 //    alert(message);
 
 //    tg.sendData(JSON data)
-    enableClosingConfirmation();
+//    enableClosingConfirmation();
     tg.close();
 });
