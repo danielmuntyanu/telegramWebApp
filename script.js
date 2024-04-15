@@ -83,11 +83,11 @@ order.addEventListener("click", () => {
 
     let message = '';
     for (let key in data) {
-        message += key + ': ' + data[key] + '\n'
+        message += key + ': ' + data[key] + '\n';
     }
     alert(message);
 
 //    tg.sendData(JSON data)
-    enableClosingConfirmation()
+    enableClosingConfirmation();
     tg.close();
 });
