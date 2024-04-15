@@ -34,38 +34,60 @@ buy.addEventListener("click", () => {
 
 //    alert('InitData: ' + tg.initData);
 
-    document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
+    document.getElementById("first_name").value = tg.initDataUnsafe.user.first_name;
+    document.getElementById("last_name").value = tg.initDataUnsafe.user.last_name;
+    document.getElementById("username").value = tg.initDataUnsafe.user.username;
+    document.getElementById("language_code").value = tg.initDataUnsafe.user.language_code;
+    document.getElementById("is_premium").value = tg.initDataUnsafe.user.is_premium;
+    document.getElementById("allows_write_to_pm").value = tg.initDataUnsafe.user.allows_write_to_pm;
+    document.getElementById("query_id").value = tg.initDataUnsafe.query_id;
+    document.getElementById("auth_date").value = tg.initDataUnsafe.auth_date;
+
 });
 
 order.addEventListener("click", () => {
     return;
     document.getElementById("error").innerText = '';
-    let name = document.getElementById("user_name").value;
-    let email = document.getElementById("user_email").value;
-    let phone = document.getElementById("user_phone").value;
 
-    for (let item of [name, email, phone]) {
-        if (!item) {
-            document.getElementById("error").innerText = 'Присутствуют пустые значения!';
-            return;
-        } else {
-            if (item.length < 5) {
-                document.getElementById("error").innerText = 'Ошибка: ' + item;
-                return;
-            }
-        }
-    }
+    let first_name = document.getElementById("first_name").value;
+    let last_name = document.getElementById("last_name").value;
+    let uesrname = document.getElementById("username").value;
+    let language_code = document.getElementById("language_code").value;
+    let is_premium = document.getElementById("is_premium").value;
+    let allows_write_to_pm = document.getElementById("allows_write_to_pm").value;
+    let query_id = document.getElementById("query_id").value;
+    let auth_date = document.getElementById("auth_date").value;
+
+//    for (let item of [name, email, phone]) {
+//        if (!item) {
+//            document.getElementById("error").innerText = 'Присутствуют пустые значения!';
+//            return;
+//        } else {
+//            if (item.length < 5) {
+//                document.getElementById("error").innerText = 'Ошибка: ' + item;
+//                return;
+//            }
+//        }
+//    }
 
     let data = {
-        name: name,
-        email: email,
-        phone: phone
+        first_name: first_name,
+        last_name: last_name,
+        username: username,
+        language_code: language_code,
+        is_premium: is_premium,
+        allows_write_to_pm: allows_write_to_pm,
+        query_id: query_id,
+        auth_date: auth_date
     }
 
     let message = '';
     for (let key in data) {
         message += key + ': ' + data[key] + '\n'
     }
+    alert(message);
 
+//    tg.sendData(JSON data)
+    enableClosingConfirmation()
     tg.close();
 });
