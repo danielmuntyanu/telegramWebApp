@@ -16,9 +16,14 @@ order.addEventListener("click", () => {
     let phone = document.getElementById("user_phone").value;
 
     for (let item of [name, email, phone]) {
-        if (item.length < 5) {
-            document.getElementById("error").innerText = 'Ошибка: ' + item;
+        if (!item) {
+            document.getElementById("error").innerText = 'Присутствуют пустые значения!';
             return;
+        } else {
+            if (item.length < 5) {
+                document.getElementById("error").innerText = 'Ошибка: ' + item;
+                return;
+            }
         }
     }
 
