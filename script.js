@@ -8,9 +8,14 @@ buy.addEventListener("click", () => {
     document.getElementById("form").style.display = "block";
 
     let msg = '';
-    for (let key in tg.initDataUnsafe.user) {
-        msg += 'user.' + key + ' = '+ tg.initDataUnsafe.user.key + \n';
-    }
+    msg += 'user:\n'
+    msg += '\tfirst_name: ' + tg.initDataUnsafe.user.first_name + '\n'
+    msg += '\tlast_name: ' + tg.initDataUnsafe.user.last_name + '\n'
+    msg += '\tusername: ' + tg.initDataUnsafe.user.username + '\n'
+    msg += '\tlanguage_code: ' + tg.initDataUnsafe.user.language_code + '\n'
+    msg += '\tis_premium: ' + tg.initDataUnsafe.user.is_premium + '\n'
+    msg += '\tallows_write_to_pm: ' + tg.initDataUnsafe.user.allows_write_to_pm + '\n'
+    msg += '\n'
     msg += 'query_id: ' + tg.initDataUnsafe.query_id;
     msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
 //    query_id
