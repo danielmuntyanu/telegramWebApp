@@ -71,14 +71,14 @@ order.addEventListener("click", () => {
 //    }
 
     let data = {
-        first_name: first_name,
-        last_name: last_name,
-        username: username,
-        language_code: language_code,
-        is_premium: is_premium,
-        allows_write_to_pm: allows_write_to_pm,
-        query_id: query_id,
-        auth_date: auth_date
+        'first_name': first_name,
+        'last_name': last_name,
+        'username': username,
+        'language_code': language_code,
+        'is_premium': is_premium,
+        'allows_write_to_pm': allows_write_to_pm,
+        'query_id': query_id,
+        'auth_date': auth_date
     }
 
     let message = '';
