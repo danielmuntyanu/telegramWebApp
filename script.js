@@ -33,10 +33,5 @@ order.addEventListener("click", () => {
         message += key + ': ' + data[key] + '\n'
     }
 
-
-
-    document.getElementById("main").style.display = "block";
-    document.getElementById("form").style.display = "none";
-//    tg.close();
-    alert(message);
+    tg.close();
 });
