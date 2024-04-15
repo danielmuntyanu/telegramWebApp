@@ -6,11 +6,11 @@ let order = document.getElementById("order");
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "block";
-    document.getElementById("user_name").value = tg.InitDataUnsafe.user.first_name + " " + tg.InitDataUnsafe.user.last_name;
+    document.getElementById("user_name").value = tg.InitDataUnSafe.user.first_name + " " + tg.InitDataUnsafe.user.last_name;
 });
 
 order.addEventListener("click", () => {
-    document.getElementById("error").innerText = '';
+//    document.getElementById("error").innerText = '';
     let name = document.getElementById("user_name").value;
     let email = document.getElementById("user_email").value;
     let phone = document.getElementById("user_phone").value;
