@@ -9,22 +9,31 @@ buy.addEventListener("click", () => {
 
     let msg = '';
     for (let key in tg.initDataUnsafe.user) {
-        msg += 'user.' + key + '\n';
+        msg += 'user.' + key + ' = '+ tg.initDataUnsafe.user[key] + \n';
     }
     msg += 'query_id: ' + tg.initDataUnsafe.query_id;
+    msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
 //    query_id
-//    user
+//    user:
+//        first_name
+//        last_name
+//        username
+//        language_code
+//        is_premium
+//        allows_write_to_pm
+//
 //    auth_date
 //    hash
 
     alert(msg);
 
-    alert('InitData: ' + tg.initData);
+//    alert('InitData: ' + tg.initData);
 
     document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 });
 
 order.addEventListener("click", () => {
+    return;
     document.getElementById("error").innerText = '';
     let name = document.getElementById("user_name").value;
     let email = document.getElementById("user_email").value;
