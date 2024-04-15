@@ -1,12 +1,13 @@
 
 let tg = window.Telegram.WebApp;
+tg.expand();
 let buy = document.getElementById("buy");
 let order = document.getElementById("order");
 
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "block";
-    tg.expand();
+
 
 //    let msg = '';
 //    msg += 'user:\n'
@@ -85,9 +86,9 @@ order.addEventListener("click", () => {
     for (let key in data) {
         message += key + ': ' + data[key] + '\n';
     }
-    alert(message);
+//    alert(message);
 
-    tg.sendData(JSON.stringify(data));
-//    enableClosingConfirmation();
+//    tg.sendData(JSON.stringify(data));
+    enableClosingConfirmation();
     tg.close();
 });
