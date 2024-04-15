@@ -6,7 +6,7 @@ let order = document.getElementById("order");
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "block";
-//    aler(tg.Init);
+    aler(tg.initData);
     document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 });
 
