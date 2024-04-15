@@ -9,7 +9,7 @@ buy.addEventListener("click", () => {
 
     let msg = '';
     for (let key in tg.initDataUnsafe.user) {
-        msg += 'user.' + key + ' = '+ tg.initDataUnsafe.user[key] + \n';
+        msg += 'user.' + key + ' = '+ tg.initDataUnsafe.user.key + \n';
     }
     msg += 'query_id: ' + tg.initDataUnsafe.query_id;
     msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
