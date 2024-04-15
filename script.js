@@ -8,9 +8,14 @@ buy.addEventListener("click", () => {
     document.getElementById("form").style.display = "block";
 
     let msg = '';
-    for (let key in tg.initDataUnsafe) {
-        msg += key + '\n';
+    for (let key in tg.initDataUnsafe.user) {
+        msg += 'user.' + key + '\n';
     }
+    msg += 'query_id: ' + tg.initDataUnsafe.query_id;
+//    query_id
+//    user
+//    auth_date
+//    hash
 
     alert(msg);
 
