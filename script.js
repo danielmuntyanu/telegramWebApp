@@ -6,7 +6,16 @@ let order = document.getElementById("order");
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "block";
-    alert(tg.initDataUnsafe);
+
+    let msg = '';
+    for (let key in tg.initDataUnsafe) {
+        msg += key + '\n';
+    }
+
+    alert(msg);
+
+    alert('InitData: ' + tg.initData);
+
     document.getElementById("user_name").value = tg.initDataUnsafe.user.first_name + " " + tg.initDataUnsafe.user.last_name;
 });
 
