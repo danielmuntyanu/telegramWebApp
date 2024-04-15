@@ -6,31 +6,32 @@ let order = document.getElementById("order");
 buy.addEventListener("click", () => {
     document.getElementById("main").style.display = "none";
     document.getElementById("form").style.display = "block";
+    tg.expand();
 
-    let msg = '';
-    msg += 'user:\n'
-    msg += '\tfirst_name: ' + tg.initDataUnsafe.user.first_name + '\n'
-    msg += '\tlast_name: ' + tg.initDataUnsafe.user.last_name + '\n'
-    msg += '\tusername: ' + tg.initDataUnsafe.user.username + '\n'
-    msg += '\tlanguage_code: ' + tg.initDataUnsafe.user.language_code + '\n'
-    msg += '\tis_premium: ' + tg.initDataUnsafe.user.is_premium + '\n'
-    msg += '\tallows_write_to_pm: ' + tg.initDataUnsafe.user.allows_write_to_pm + '\n'
-    msg += '\n'
-    msg += 'query_id: ' + tg.initDataUnsafe.query_id + '\n';
-    msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
-//    query_id
-//    user:
-//        first_name
-//        last_name
-//        username
-//        language_code
-//        is_premium
-//        allows_write_to_pm
+//    let msg = '';
+//    msg += 'user:\n'
+//    msg += '\tfirst_name: ' + tg.initDataUnsafe.user.first_name + '\n'
+//    msg += '\tlast_name: ' + tg.initDataUnsafe.user.last_name + '\n'
+//    msg += '\tusername: ' + tg.initDataUnsafe.user.username + '\n'
+//    msg += '\tlanguage_code: ' + tg.initDataUnsafe.user.language_code + '\n'
+//    msg += '\tis_premium: ' + tg.initDataUnsafe.user.is_premium + '\n'
+//    msg += '\tallows_write_to_pm: ' + tg.initDataUnsafe.user.allows_write_to_pm + '\n'
+//    msg += '\n'
+//    msg += 'query_id: ' + tg.initDataUnsafe.query_id + '\n';
+//    msg += 'auth_date: ' + tg.initDataUnsafe.auth_date;
+////    query_id
+////    user:
+////        first_name
+////        last_name
+////        username
+////        language_code
+////        is_premium
+////        allows_write_to_pm
+////
+////    auth_date
+////    hash
 //
-//    auth_date
-//    hash
-
-    alert(msg);
+//    alert(msg);
 
 //    alert('InitData: ' + tg.initData);
 
@@ -86,7 +87,7 @@ order.addEventListener("click", () => {
     }
     alert(message);
 
-//    tg.sendData(JSON data)
+//    tg.sendData(JSON data);
 //    enableClosingConfirmation();
     tg.close();
 });
