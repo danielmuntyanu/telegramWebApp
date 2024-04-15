@@ -81,13 +81,13 @@ order.addEventListener("click", () => {
         'auth_date': auth_date
     }
 
-    let message = '';
-    for (let key in data) {
-        message += key + ': ' + data[key] + '\n';
-    }
-    alert(message);
+//    let message = '';
+//    for (let key in data) {
+//        message += key + ': ' + data[key] + '\n';
+//    }
+//    alert(message);
 
 //    tg.sendData(JSON data)
-//    enableClosingConfirmation();
+    enableClosingConfirmation();
     tg.close();
 });
