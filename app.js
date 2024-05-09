@@ -3,6 +3,9 @@ let tg = window.Telegram.WebApp;
 tg.expand();
 tg.enableClosingConfirmation();
 
+tg.BackButton.show();
+tg.SettingsButton.show();
+
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
 
@@ -24,6 +27,7 @@ btn1.addEventListener("click", function () {
     tg.MainButton.show();
   }
 });
+
 btn2.addEventListener("click", function () {
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
@@ -33,6 +37,7 @@ btn2.addEventListener("click", function () {
     tg.MainButton.show();
   }
 });
+
 btn3.addEventListener("click", function () {
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
@@ -42,6 +47,7 @@ btn3.addEventListener("click", function () {
     tg.MainButton.show();
   }
 });
+
 btn4.addEventListener("click", function () {
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
@@ -51,7 +57,12 @@ btn4.addEventListener("click", function () {
     tg.MainButton.show();
   }
 });
+
 btn5.addEventListener("click", function () {
+  tg.requestContact(function (contact) {
+    alert(contact);
+  });
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
@@ -60,6 +71,7 @@ btn5.addEventListener("click", function () {
     tg.MainButton.show();
   }
 });
+
 btn6.addEventListener("click", function () {
   tg.showConfirm("Do you want to press OK?", function (result) {
     if (result == true) {
