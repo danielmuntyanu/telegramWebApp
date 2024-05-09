@@ -25,12 +25,12 @@ function ButtonClicked(btn_obj) {
   }
 }
 
-btn1.addEventListener("click", ButtonClicked(btn1));
-btn2.addEventListener("click", ButtonClicked(btn2));
-btn3.addEventListener("click", ButtonClicked(btn3));
-btn4.addEventListener("click", ButtonClicked(btn4));
-btn5.addEventListener("click", ButtonClicked(btn5));
-btn6.addEventListener("click", ButtonClicked(btn6));
+btn1.addEventListener("click", ButtonClicked);
+btn2.addEventListener("click", ButtonClicked);
+btn3.addEventListener("click", ButtonClicked);
+btn4.addEventListener("click", ButtonClicked);
+btn5.addEventListener("click", ButtonClicked);
+btn6.addEventListener("click", ButtonClicked);
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
   tg.sendData(item);
