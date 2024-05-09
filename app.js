@@ -1,5 +1,6 @@
 let tg = window.Telegram.WebApp;
 
+tg.ready();
 tg.expand();
 tg.enableClosingConfirmation();
 
@@ -39,6 +40,8 @@ btn2.addEventListener("click", function () {
 });
 
 btn3.addEventListener("click", function () {
+  tg.mpactOccurred("heavy");
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
@@ -49,6 +52,8 @@ btn3.addEventListener("click", function () {
 });
 
 btn4.addEventListener("click", function () {
+  tg.mpactOccurred("medium");
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
