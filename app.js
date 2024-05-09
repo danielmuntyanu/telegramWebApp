@@ -20,6 +20,8 @@ let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
 btn1.addEventListener("click", function () {
+  tg.notificationOccurred("success");
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
@@ -30,6 +32,8 @@ btn1.addEventListener("click", function () {
 });
 
 btn2.addEventListener("click", function () {
+  tg.notificationOccurred("error");
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
@@ -64,8 +68,8 @@ btn4.addEventListener("click", function () {
 });
 
 btn5.addEventListener("click", function () {
-  tg.requestContact(function (contact) {
-    alert(contact);
+  tg.requestContact(function (result) {
+    alert(result);
   });
 
   if (tg.MainButton.isVisible) {
