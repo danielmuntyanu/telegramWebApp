@@ -14,23 +14,60 @@ let btn4 = document.getElementById("btn4");
 let btn5 = document.getElementById("btn5");
 let btn6 = document.getElementById("btn6");
 
-function ButtonClicked(btn_obj) {
+btn1.addEventListener("click", function () {
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
-    let item_number = btn_obj.id.at(-1);
-    tg.MainButton.setText("Вы выбрали товар " + item_number + "!");
-    item = item_number;
+    tg.MainButton.setText("Вы выбрали товар 1!");
+    item = "1";
     tg.MainButton.show();
   }
-}
-
-btn1.addEventListener("click", ButtonClicked);
-btn2.addEventListener("click", ButtonClicked);
-btn3.addEventListener("click", ButtonClicked);
-btn4.addEventListener("click", ButtonClicked);
-btn5.addEventListener("click", ButtonClicked);
-btn6.addEventListener("click", ButtonClicked);
+});
+btn2.addEventListener("click", function () {
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide();
+  } else {
+    tg.MainButton.setText("Вы выбрали товар 2!");
+    item = "2";
+    tg.MainButton.show();
+  }
+});
+btn3.addEventListener("click", function () {
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide();
+  } else {
+    tg.MainButton.setText("Вы выбрали товар 3!");
+    item = "3";
+    tg.MainButton.show();
+  }
+});
+btn4.addEventListener("click", function () {
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide();
+  } else {
+    tg.MainButton.setText("Вы выбрали товар 4!");
+    item = "4";
+    tg.MainButton.show();
+  }
+});
+btn5.addEventListener("click", function () {
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide();
+  } else {
+    tg.MainButton.setText("Вы выбрали товар 5!");
+    item = "5";
+    tg.MainButton.show();
+  }
+});
+btn6.addEventListener("click", function () {
+  if (tg.MainButton.isVisible) {
+    tg.MainButton.hide();
+  } else {
+    tg.MainButton.setText("Вы выбрали товар 6!");
+    item = "6";
+    tg.MainButton.show();
+  }
+});
 
 Telegram.WebApp.onEvent("mainButtonClicked", function () {
   tg.sendData(item);
