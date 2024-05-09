@@ -1,6 +1,7 @@
 let tg = window.Telegram.WebApp;
 
 tg.expand();
+tg.enableClosingConfirmation();
 
 tg.MainButton.textColor = "#FFFFFF";
 tg.MainButton.color = "#2cab37";
@@ -60,6 +61,12 @@ btn5.addEventListener("click", function () {
   }
 });
 btn6.addEventListener("click", function () {
+  tg.showConfirm("Do you want to press OK?", function (result) {
+    if (result == true) {
+      alert("OKAY");
+    }
+  });
+
   if (tg.MainButton.isVisible) {
     tg.MainButton.hide();
   } else {
