@@ -2,7 +2,7 @@ let tg = window.Telegram.WebApp;
 
 tg.ready();
 tg.expand();
-tg.enableClosingConfirmation();
+// tg.enableClosingConfirmation();
 
 tg.BackButton.show();
 tg.SettingsButton.show();
